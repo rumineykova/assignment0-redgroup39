@@ -18,6 +18,9 @@ public class Calculator {
 			subtask2();
 			System.out.print("The chosen subtask is " + subtask); 
 			break;
+		case 6: 
+			subtask6(); 
+			break;
 		default: System.out.print("something else");
 		}
 	}
@@ -32,6 +35,14 @@ public class Calculator {
 	
 	public static void subtask3() {
 		System.out.print("Task 3 is about temperature");
+	}
+	
+	public static void subtask6() {
+		System.out.println("Enter a binary number");
+		Scanner scanner = new Scanner(System.in);
+		int binary = scanner.nextInt();
+		int result = Task6.getDecimal(binary);
+		System.out.println("Decimal of " + binary + " is " + result);
 	}
 
 }
