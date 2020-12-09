@@ -12,7 +12,7 @@ public class Calculator {
 	
 	public static void mainMenu()
 	{
-		System.out.println("Enter a task between 1 - 6");
+		System.out.println("Enter a task between 1 - 6 Or to Exit enter 7");
 		Scanner scanner = new Scanner(System.in);		
 		int subtask = scanner.nextInt(); 	
 		
@@ -27,6 +27,9 @@ public class Calculator {
 			break;
 		case 6: 
 			subtask6(); 
+			break;
+		case 7:
+			System.out.println("Exiting Calculator");
 			break;
 		default: 
 			System.out.println("Invalid Value");
