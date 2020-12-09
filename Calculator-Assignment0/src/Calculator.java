@@ -18,10 +18,14 @@ public class Calculator {
 			subtask2();
 			System.out.print("The chosen subtask is " + subtask); 
 			break;
+		case 4:
+			subtask4();
+			break;
 		case 6: 
 			subtask6(); 
 			break;
-		default: System.out.print("something else");
+		default: System.out.print("Invalid Value");
+		scanner.close();
 		}
 	}
 
@@ -37,12 +41,52 @@ public class Calculator {
 		System.out.print("Task 3 is about temperature");
 	}
 	
+	 public static void subtask4() {
+
+	        String input;
+	        do {
+	        	System.out.println();
+	            System.out.println("Conversions: Input 'Weight', 'Length' Or to Exit: input 'Exit'"); //User Menu
+	            input = ScannerInput.inputToLowerCase();
+
+	             if (input.equals("weight")) // tests to see if the input is equal to weight
+	                {
+	                    System.out.println("Conversion type: input 'Imperial' Or 'Metric'");
+	                    input = ScannerInput.inputToLowerCase(); // the following if statements check the user input
+	                    if (input.equals("imperial")) {  
+	                        Conversion.gramsToPoundsAndOunces();
+	                    } else if (input.equals("metric")){
+	                        Conversion.poundsAndOuncesToGrams();
+	                    }
+	                }
+	             else if (input.equals("length")) // tests to see if the input is equal to length
+	                {
+	                    System.out.println("Conversion type: input 'Imperial' Or 'Metric'");
+	                    input = ScannerInput.inputToLowerCase();
+
+	                    if (input.equals("imperial")) {
+	                        Conversion.cmToFeetAndInches();
+	                    } else if (input.equals("metric"))
+	                    {
+	                        Conversion.feetAndInchesToCm();
+	                    }
+	                }
+	             if (input.equals("exit")) {
+//	                    main(); //go back to the main menu to select a different subtask
+	                }
+
+	        }while (!input.equals("exit"));
+
+	        ScannerInput.closeScanner();
+	    }
+	 
 	public static void subtask6() {
 		System.out.println("Enter a binary number");
 		Scanner scanner = new Scanner(System.in);
 		int binary = scanner.nextInt();
 		int result = Task6.getDecimal(binary);
 		System.out.println("Decimal of " + binary + " is " + result);
+		scanner.close();
 	}
 
 }
