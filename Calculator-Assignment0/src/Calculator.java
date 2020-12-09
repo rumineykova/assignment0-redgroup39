@@ -5,18 +5,22 @@ public class Calculator {
 	//2.  User enters a number, for example 4
 	//3.  User sees: The user chose  option 4
 	// ....
-	public static void main(String[] args) {
-		System.out.println("Enter a task");
+	public static void main(String[] args) 
+	{
+		mainMenu();
+	}
+	
+	public static void mainMenu()
+	{
+		System.out.println("Enter a task between 1 - 6");
 		Scanner scanner = new Scanner(System.in);		
 		int subtask = scanner.nextInt(); 	
-		System.out.println("The chosen subtask is " + subtask);
 		
 		switch (subtask) {
 		case 1: 
 			subtask1();break;
 		case 2: 
 			subtask2();
-			System.out.print("The chosen subtask is " + subtask); 
 			break;
 		case 4:
 			subtask4();
@@ -24,7 +28,9 @@ public class Calculator {
 		case 6: 
 			subtask6(); 
 			break;
-		default: System.out.print("Invalid Value");
+		default: 
+			System.out.println("Invalid Value");
+			mainMenu();
 		scanner.close();
 		}
 	}
@@ -46,7 +52,7 @@ public class Calculator {
 	        String input;
 	        do {
 	        	System.out.println();
-	            System.out.println("Conversions: Input 'Weight', 'Length' Or to Exit: input 'Exit'"); //User Menu
+	            System.out.println("Conversions: Input 'Weight', 'Length' Or to Exit to Menu: input 'Exit'"); //User Menu
 	            input = ScannerInput.inputToLowerCase();
 
 	             if (input.equals("weight")) // tests to see if the input is equal to weight
@@ -72,7 +78,7 @@ public class Calculator {
 	                    }
 	                }
 	             if (input.equals("exit")) {
-//	                    main(); //go back to the main menu to select a different subtask
+	                    mainMenu(); //go back to the main menu to select a different subtask
 	                }
 
 	        }while (!input.equals("exit"));
@@ -85,7 +91,10 @@ public class Calculator {
 		Scanner scanner = new Scanner(System.in);
 		int binary = scanner.nextInt();
 		int result = Task6.getDecimal(binary);
-		System.out.println("Decimal of " + binary + " is " + result);
+		System.out.println("Decimal of " + binary + " is " + result);	
+		System.out.println();
+		
+		mainMenu();
 		scanner.close();
 	}
 
