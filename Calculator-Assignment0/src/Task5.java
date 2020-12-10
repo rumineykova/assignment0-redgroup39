@@ -25,7 +25,7 @@ public class Task5 {
 			}
 			for(int i = index - 1; i>=0;i--)
 				System.out.print(binary[i]);
-			System.out.print(" is the binary form for " + input);
+			System.out.println(" is the binary form for " + input);
 		}
 	}
 }

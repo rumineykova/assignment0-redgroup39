@@ -95,6 +95,7 @@ public class Calculator {
 	
 	public static void subtask5() {
 		Task5.decimalToBinary();
+		mainMenu();
 	}
 	 
 	public static void subtask6() {
@@ -106,6 +107,8 @@ public class Calculator {
 		System.out.println();
 		
 		mainMenu();
+		// Rumi: Will this ever be executed?
+		// When is scanner.close() needed
 		scanner.close();
 	}
 
