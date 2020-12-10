@@ -1,5 +1,4 @@
-
-public class Conversion 
+public class Conversion //Task 4
 {
 	 public static boolean validation(double x) //validation check
 	    {

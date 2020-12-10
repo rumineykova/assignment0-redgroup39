@@ -16,7 +16,8 @@ public class Calculator {
 		Scanner scanner = new Scanner(System.in);		
 		int subtask = scanner.nextInt(); 	
 		
-		switch (subtask) {
+		switch (subtask) 
+		{
 		case 1: 
 			subtask1();break;
 		case 2: 

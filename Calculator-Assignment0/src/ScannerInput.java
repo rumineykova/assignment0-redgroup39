@@ -1,4 +1,4 @@
-public class ScannerInput 
+public class ScannerInput //Task 4
 {
 	public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 

@@ -1,9 +1,13 @@
 import java.util.Scanner;
-public class Task2 {
-	public static double powerfunction(int pow, double base) {
+public class Task2 
+{
+	public static double powerfunction(int pow, double base) 
+	{
 		double result;
 		result = base;
-		if (pow > 1) {
+		
+		if (pow > 1) 
+		{
 			int i = 1;
 			do{
 			result *= base;
