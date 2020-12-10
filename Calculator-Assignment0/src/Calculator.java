@@ -43,7 +43,8 @@ public class Calculator {
 	}
 	
 	public static void subtask2() {
-		System.out.print("Task 2 is about adition");
+		System.out.println("Task 2 is about power, modulus and root.");
+		Task2.MainMenu();
 	}
 	
 	public static void subtask3() {
