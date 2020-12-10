@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class converter 
 {
 
-	public static void main(String[] args) 
+	public static void start() 
 	{
 		int userChoice = optionSelection();
 		ifSelection(userChoice);
@@ -56,7 +56,7 @@ public class converter
 		do 
 		{
 			System.out.print("Enter any temperature in Fahrenheit that is above absolute zero: ");
-			fahrenheit = keyboard.nextDouble();
+			fahrenheit = keyboard.nextDouble();		
 			
 		}while(fahrenheit <= -459.67);
 		return fahrenheit;

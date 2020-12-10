@@ -22,6 +22,9 @@ public class Calculator {
 		case 2: 
 			subtask2();
 			break;
+		case 3: 
+			subtask3();
+			break;
 		case 4:
 			subtask4();
 			break;
@@ -51,8 +54,10 @@ public class Calculator {
 	}
 	
 	public static void subtask3() {
-		System.out.print("Task 3 is about temperature");
+		converter.start();
+		mainMenu();
 	}
+	
 	
 	 public static void subtask4() {
 
