@@ -12,7 +12,7 @@ public class ScannerInput //Task 4
     public static double inputDouble()
     {
         double input = scanner.nextDouble();
-        scanner.nextLine();
+        scanner.nextLine(); 
         return input;
     }
 

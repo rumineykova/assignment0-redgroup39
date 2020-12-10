@@ -12,14 +12,14 @@ public class Calculator {
 	
 	public static void mainMenu()
 	{
-		System.out.println("Enter a task between 1 - 6 Or to Exit enter 7");
+		System.out.println("Enter a task between 2 - 6 Or to Exit enter 7");
 		Scanner scanner = new Scanner(System.in);		
 		int subtask = scanner.nextInt(); 	
-		
+	
+		try {
 		switch (subtask) 
 		{
-		case 1: 
-			subtask1();break;
+
 		case 2: 
 			subtask2();
 			break;
@@ -36,17 +36,17 @@ public class Calculator {
 			subtask6(); 
 			break;
 		case 7:
-			System.out.println("Exiting Calculator");
+			System.out.println("Exiting Calculator...");
 			break;
 		default: 
 			System.out.println("Invalid Value");
 			mainMenu();
 		scanner.close();
 		}
-	}
-
-	public static void subtask1() {
-		System.out.print("Task 1 is about adition");
+		} catch (Exception e) {
+			System.out.println("Ooops. Try again. ");
+			mainMenu(); 
+		} 
 	}
 	
 	public static void subtask2() {
@@ -104,7 +104,7 @@ public class Calculator {
 		mainMenu();
 	}
 	 
-	public static void subtask6() {
+	public static void subtask6() throws Exception {
 		System.out.println("Enter a binary number");
 		Scanner scanner = new Scanner(System.in);
 		int binary = scanner.nextInt();
@@ -113,9 +113,8 @@ public class Calculator {
 		System.out.println();
 		
 		mainMenu();
-		// Rumi: Will this ever be executed?
+		// Rumy: Will this ever be executed?
 		// When is scanner.close() needed
-		scanner.close();
+	
 	}
-
 }

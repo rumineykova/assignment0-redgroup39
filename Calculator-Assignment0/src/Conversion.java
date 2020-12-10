@@ -35,7 +35,7 @@ public class Conversion //Task 4
 	        System.out.print("Input Pounds= ");
 	        double pounds = ScannerInput.inputDouble();
 
-	        System.out.print("Input Ounces= ");
+	        System.out.print("Input Ounces that are less 16= ");
 	        double ounces = ScannerInput.inputDouble();
 
 	        if ((validation(pounds)) && ((validation(ounces)) && (ounces >= 16)))
@@ -74,7 +74,7 @@ public class Conversion //Task 4
 	        System.out.print("Input Feet= ");
 	        double feet = ScannerInput.inputDouble();
 
-	        System.out.print("Input Inches= ");
+	        System.out.print("Input Inches that are less than 12= ");
 	        double inches = ScannerInput.inputDouble();
 
 	        if ((validation(feet)) && ((validation(inches)) && (inches >= 12)))

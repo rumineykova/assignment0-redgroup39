@@ -76,7 +76,7 @@ public class converter
 	
 	public static void userQuit() 
 	{
-		System.exit(0);
+		Calculator.mainMenu();
 	}
 	
 	
